@@ -35,8 +35,6 @@ public class SortingTester<T extends Comparable<T>> {
                 .mapToLong(Duration::toMillis)
                 .sum();
 
-        System.out.println(sum);
-
         System.out.printf("\t\tTiempo promedio: %s ms\n", average);
     }
 }
