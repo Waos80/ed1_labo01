@@ -11,7 +11,7 @@ class MainTest {
         final var sortedArrayGenerator = Main.getSortedArrayGenerator();
         assertThat(sortedArrayGenerator).isNotNull();
 
-        final Integer[] array = sortedArrayGenerator.generate(10);
+        final String[] array = sortedArrayGenerator.generate(10);
 
         assertThat(array)
                 .isNotNull()
@@ -31,7 +31,7 @@ class MainTest {
         final var invertedArrayGenerator = Main.getInvertedArrayGenerator();
         assertThat(invertedArrayGenerator).isNotNull();
 
-        final Integer[] array = invertedArrayGenerator.generate(10);
+        final String[] array = invertedArrayGenerator.generate(10);
 
         assertThat(array)
                 .isNotNull()
@@ -51,14 +51,14 @@ class MainTest {
         final var randomArrayGenerator = Main.getRandomArrayGenerator();
         assertThat(randomArrayGenerator).isNotNull();
 
-        final Integer[] array = randomArrayGenerator.generate(10);
+        final String[] array = randomArrayGenerator.generate(10);
 
         assertThat(array)
                 .isNotNull()
                 .hasSize(10);
 
-        for (Integer integer : array) {
-            assertThat(integer).isNotNull();
+        for (String str : array) {
+            assertThat(str).isNotNull();
         }
     }
 
@@ -70,17 +70,17 @@ class MainTest {
         final var randomArrayGenerator = Main.getRandomArrayGenerator();
         assertThat(randomArrayGenerator).isNotNull();
 
-        final Integer[] array = randomArrayGenerator.generate(10);
-        assertThat(array)
+        final String[] str = randomArrayGenerator.generate(10);
+        assertThat(str)
                 .isNotNull()
                 .hasSize(10);
 
-        highPivotQuickSort.sort(array);
+        highPivotQuickSort.sort(str);
 
-        for (int i = 1; i < array.length; i++) {
-            assertThat(array[i])
+        for (int i = 1; i < str.length; i++) {
+            assertThat(str[i])
                     .isNotNull()
-                    .isGreaterThanOrEqualTo(array[i - 1]);
+                    .isGreaterThanOrEqualTo(str[i - 1]);
         }
     }
 
@@ -92,7 +92,7 @@ class MainTest {
         final var randomArrayGenerator = Main.getRandomArrayGenerator();
         assertThat(randomArrayGenerator).isNotNull();
 
-        final Integer[] array = randomArrayGenerator.generate(10);
+        final String[] array = randomArrayGenerator.generate(10);
         assertThat(array)
                 .isNotNull()
                 .hasSize(10);
@@ -114,7 +114,7 @@ class MainTest {
         final var randomArrayGenerator = Main.getRandomArrayGenerator();
         assertThat(randomArrayGenerator).isNotNull();
 
-        final Integer[] array = randomArrayGenerator.generate(10);
+        final String[] array = randomArrayGenerator.generate(10);
         assertThat(array)
                 .isNotNull()
                 .hasSize(10);
