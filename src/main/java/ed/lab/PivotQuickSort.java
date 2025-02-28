@@ -7,6 +7,8 @@ interface PartitionMethod {
 }
 
 public class PivotQuickSort {
+    private static final Random rand = new Random();
+
     private static int highPivotPartition(Integer[] arr, int low, int high) {
         int pivot = arr[high];
         int i = low - 1;
@@ -46,7 +48,6 @@ public class PivotQuickSort {
     }
 
     private static int randomPivotPartition(Integer[] arr, int low, int high) {
-        Random rand = new Random();
         int pivotIdx = rand.nextInt(high - low) + low;
         int temp = arr[high];
         arr[high] = arr[pivotIdx];
